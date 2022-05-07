@@ -40,8 +40,22 @@ function pokemonBigView() {
 
 }
 
-function renderPokemonInfo() {
-    document.getElementById('pokemonName').innerHTML = currentPokemon['name'];
-    document.getElementById('pokemonImage').src = currentPokemon['sprites']['front_shiny']
+async function renderPokemoBigView(i) {
+
+    document.getElementById('pokemonBigViewBox').classList.remove('d-none')
+    let bigViewImage = document.getElementById('pokemonBigView');
+    let bigViewInfo = document.getElementById('pokemonBigViewInfo');
+
+    bigViewImage.innerHTML = '';
+    bigViewInfo.innerHTML = '';
+
+
+    bigViewImage.innerHTML += renderPokemonBigViewHTML(i);
+    bigViewInfo.innerHTML += renderPokemonBigViewInfoHTML(i);
+
+}
+
+function hideBigView() {
+    document.getElementById('pokemonBigViewBox').classList.add('d-none')
 
 }

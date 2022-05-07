@@ -12,20 +12,18 @@
 </head>
 
 <body onload="loadPokemon()">
+    <div onclick="hideBigView()" id="pokemonBigViewBox" class="pokemon-big-view d-none">
+        <div class="pokedex" id="pokemonBigView">
+        </div>
+        <div class="info-container" id="pokemonBigViewInfo">
+        </div>
+    </div>
+
     <div class="headline">
         <img src="/img/pokeball.png" alt="">
         <h1>POKEDEX</h1>
-
     </div>
-    <div class="pokemon-big-view">
-        <div class="pokedex" id="pokedex">
-            <h1 id="pokemonName"></h1>
-        </div>
-        <div class="info-container">
-            <img id="pokemonImage">
-        </div>
 
-    </div>
     <div id="pokemonMainBox" class="pokemon-main-box">
 
     </div>

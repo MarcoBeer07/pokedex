@@ -1,13 +1,12 @@
 body {
     background-image: url(./img/low-angle-shot-of-the-mesmerizing-starry-sky.jpg);
     background-size: cover;
-    background-color: rgb(41, 143, 41);
     font-family: 'Alegreya SC';
     margin: 0;
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .headline {
@@ -65,48 +64,55 @@ h3 {
 }
 
 .pokedex {
-    display: none;
+    position: relative;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    min-height: 150px;
-    width: 200px;
+    min-height: 350px;
+    width: 400px;
     background-color: rgb(245, 51, 51);
-    color: white;
+}
+
+.pokedex h1,
+h3 {
+    padding-left: 30px;
+    color: rgb(0, 0, 0);
 }
 
 .info-container {
+    position: relative;
     background-color: white;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     min-height: 100px;
-    width: 200px;
+    width: 400px;
     margin-top: -28px;
 }
 
-.pokemon-type-grass {
-    background-color: rgba(99, 190, 99, 0.76);
+.info-container h1,
+h3 {
+    color: rgb(0, 0, 0);
 }
 
-.pokemon-type-fire {
-    background-color: rgba(250, 101, 101, 0.76);
+.pokemon-big-view {
+    position: relative;
+    font-family: fantasy;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.514);
 }
 
-.pokemon-type-water {
-    background-color: rgba(91, 119, 241, 0.76);
-}
-
-.pokemon-type-normal {
-    background-color: rgba(212, 212, 212, 0.76);
-}
-
-.pokemon-type-poison {
-    background-color: rgba(116, 78, 206, 0.76);
-}
-
-.pokemon-type-electric {
-    background-color: rgba(212, 238, 98, 0.76);
-}
-
-.pokemon-type-ground {
-    background-color: rgba(105, 87, 27, 0.76);
+.pokemon-big-view-img {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    z-index: 3;
+    width: 150px;
 }

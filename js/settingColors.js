@@ -12,13 +12,23 @@ function setRightColorBigView(i) {
     } else if (type == 'bug') {
         document.getElementById("pokemonBigView").style.backgroundColor = '#54FF9F'
     } else if (type == 'normal') {
-        document.getElementById("pokemonBigView").style.backgroundColor = '#D2691E'
+        document.getElementById("pokemonBigView").style.backgroundColor = '#f5f5f5'
     } else if (type == 'electric') {
         document.getElementById("pokemonBigView").style.backgroundColor = '#B3EE3A'
     } else if (type == 'fairy') {
-        document.getElementById("pokemonBigView").style.backgroundColor = '#C1CDCD'
+        document.getElementById("pokemonBigView").style.backgroundColor = '#f3d0f7'
     } else if (type == 'ground') {
         document.getElementById("pokemonBigView").style.backgroundColor = '#8B7E66'
+    } else if (type == 'fighting') {
+        document.getElementById("pokemonBigView").style.backgroundColor = '#666969'
+    } else if (type == 'psychic') {
+        document.getElementById("pokemonBigView").style.backgroundColor = '#36e3bb'
+    } else if (type == 'rock') {
+        document.getElementById("pokemonBigView").style.backgroundColor = '#47301f'
+    } else if (type == 'dragon') {
+        document.getElementById("pokemonBigView").style.backgroundColor = '#36e007'
+    } else if (type == 'ghost') {
+        document.getElementById("pokemonBigView").style.backgroundColor = '#453747'
     }
 }
 
@@ -36,13 +46,23 @@ function setRightColorNormalView(i) {
     } else if (type == 'bug') {
         document.getElementById("pokemonBox" + i).style.backgroundColor = '#54FF9F'
     } else if (type == 'normal') {
-        document.getElementById("pokemonBox" + i).style.backgroundColor = '#D2691E'
+        document.getElementById("pokemonBox" + i).style.backgroundColor = '#f5f5f5'
     } else if (type == 'electric') {
         document.getElementById("pokemonBox" + i).style.backgroundColor = '#B3EE3A'
     } else if (type == 'fairy') {
-        document.getElementById("pokemonBox" + i).style.backgroundColor = '#C1CDCD'
+        document.getElementById("pokemonBox" + i).style.backgroundColor = '#f3d0f7'
     } else if (type == 'ground') {
         document.getElementById("pokemonBox" + i).style.backgroundColor = '#8B7E66'
+    } else if (type == 'fighting') {
+        document.getElementById("pokemonBox" + i).style.backgroundColor = '#666969'
+    } else if (type == 'psychic') {
+        document.getElementById("pokemonBox" + i).style.backgroundColor = '#36e3bb'
+    } else if (type == 'rock') {
+        document.getElementById("pokemonBox" + i).style.backgroundColor = '#47301f'
+    } else if (type == 'dragon') {
+        document.getElementById("pokemonBox" + i).style.backgroundColor = '#36e007'
+    } else if (type == 'ghost') {
+        document.getElementById("pokemonBox" + i).style.backgroundColor = '#453747'
     }
 }
 
@@ -60,12 +80,22 @@ function setRightColorSearchView(j) {
     } else if (type == 'bug') {
         document.getElementById("pokemonBox" + j).style.backgroundColor = '#54FF9F'
     } else if (type == 'normal') {
-        document.getElementById("pokemonBox" + j).style.backgroundColor = '#D2691E'
+        document.getElementById("pokemonBox" + j).style.backgroundColor = '#f5f5f5'
     } else if (type == 'electric') {
         document.getElementById("pokemonBox" + j).style.backgroundColor = '#B3EE3A'
     } else if (type == 'fairy') {
-        document.getElementById("pokemonBox" + j).style.backgroundColor = '#C1CDCD'
+        document.getElementById("pokemonBox" + j).style.backgroundColor = '#f3d0f7'
     } else if (type == 'ground') {
         document.getElementById("pokemonBox" + j).style.backgroundColor = '#8B7E66'
+    } else if (type == 'fighting') {
+        document.getElementById("pokemonBox" + j).style.backgroundColor = '#666969'
+    } else if (type == 'psychic') {
+        document.getElementById("pokemonBox" + j).style.backgroundColor = '#36e3bb'
+    } else if (type == 'rock') {
+        document.getElementById("pokemonBox" + j).style.backgroundColor = '#47301f'
+    } else if (type == 'dragon') {
+        document.getElementById("pokemonBox" + j).style.backgroundColor = '#36e007'
+    } else if (type == 'ghost') {
+        document.getElementById("pokemonBox" + j).style.backgroundColor = '#453747'
     }
 }

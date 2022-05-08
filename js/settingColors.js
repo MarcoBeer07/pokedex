@@ -1,3 +1,6 @@
+/**
+ * Function set the right backroundcolor for the pokemon container belongs to the types of them
+ */
 function setRightColorBigView(i) {
     let type = allPokemons[i - 1]['types'][0]['type']['name'];
 

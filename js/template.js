@@ -1,3 +1,6 @@
+/**
+ * Template to show the pokemon-data for the pokemon container on the main page
+ */
 function renderPokemonHTML(i) {
     return `
         <div onclick="renderPokemoBigView(${i})" id="pokemonBox${i}" class="pokemon-box">
@@ -7,7 +10,9 @@ function renderPokemonHTML(i) {
         </div>
         `
 }
-
+/**
+ * Template to show the pokemon-data for viewing the pokemon container with more information
+ */
 function renderPokemonBigViewHTML(i) {
     return `
         <div>
@@ -17,7 +22,9 @@ function renderPokemonBigViewHTML(i) {
         </div>
         `
 }
-
+/**
+ * Template to show the pokemon-data for viewing the pokemon container with more information
+ */
 function renderPokemonBigViewInfoHTML(i) {
     return `
         <div>
@@ -40,7 +47,9 @@ function renderPokemonBigViewInfoHTML(i) {
         </div>
         `
 }
-
+/**
+ * Template to show the pokemon-data for the searched pokemon
+ */
 function renderSearchedPokemonHTML(i, j) {
     return `
         <div onclick="renderPokemoBigView(${j+1})" id="pokemonBox${j}" class="pokemon-box">

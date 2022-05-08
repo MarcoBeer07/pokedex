@@ -36,3 +36,13 @@ function renderPokemonBigViewInfoHTML(i) {
         </div>
         `
 }
+
+function renderSearchedPokemonHTML(i, j) {
+    return `
+        <div onclick="renderPokemoBigView(${i})" id="pokemonBox${j}" class="pokemon-box">
+            <h1>${allPokemons[j]['name']}</h1>
+            <h3>${allPokemons[j]['types'][0]['type']['name']}<h3>
+            <img class="pokemon-box-img" src=${allPokemons[j]['sprites']['other']['dream_world']['front_default']}>
+        </div>
+        `
+}

@@ -92,3 +92,27 @@ function setRightColorNormalView(i) {
         document.getElementById("pokemonBox" + i).style.backgroundColor = '#8B7E66'
     }
 }
+
+async function searchPokemon(i) {
+
+
+    let searchPokemon = document.getElementById('searchPokemon').value;
+    searchPokemon = searchPokemon.toLowerCase();
+
+    let url = `https://pokeapi.co/api/v2/pokemon/${searchPokemon}`;
+    let response1 = await fetch(url);
+    searchPokemon = await response1.json();
+
+    let name = searchPokemon;
+    name.toLowerCase;
+
+    let pokemonMainBox = document.getElementById('pokemonMainBox')
+
+
+    if (searchPokemon['name']) {
+        console.log('++')
+        pokemonMainBox.innerHTML = '';
+        pokemonMainBox.innerHTML += renderPokemonHTML(searchPokemon);
+    }
+
+}

@@ -8,7 +8,7 @@ function init() {
 }
 
 async function loadPokemon() {
-    for (let i = 1; i < 10; i++) {
+    for (let i = 1; i < 151; i++) {
 
         let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         let response = await fetch(url);
@@ -61,12 +61,12 @@ function searchPokemon(i) {
 
     for (let j = 0; j < allPokemons.length; j++) {
         let allPokemon = allPokemons[j]['name'];
+
         if (allPokemon.toLowerCase().includes(searchPokemon)) {
-            console.log('++');
             pokemonMainBox.innerHTML = renderSearchedPokemonHTML(i, j);
             setRightColorSearchView(j)
-        } else if (searchPokemon.value <= 0) {
-            pokemonMainBox.innerHTML = '';
+        } else {
+            console.log('hi')
         }
     }
 }

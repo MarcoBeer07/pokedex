@@ -1,0 +1,36 @@
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 22px;
+    }
+    h2,
+    h3 {
+        font-size: 16px;
+    }
+    .headline {
+        padding-top: 20px;
+        align-items: center;
+        padding-bottom: 0px;
+    }
+    .headline img {
+        width: 80px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .headline h1 {
+        font-size: 50px;
+    }
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        margin-left: 0px;
+    }
+    .search-bar input {
+        height: 35px;
+        min-width: 150px;
+    }
+    .pokemon-box {
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+}

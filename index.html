@@ -11,7 +11,7 @@
     <title>Pokedex</title>
 </head>
 
-<body onload="loadPokemon()">
+<body onload="init()">
     <div onclick="hideBigView()" id="pokemonBigViewBox" class="pokemon-big-view d-none">
         <div class="pokedex" id="pokemonBigView">
         </div>
@@ -23,6 +23,7 @@
         <img src="/img/pokeball.png" alt="">
         <h1>POKEDEX</h1>
     </div>
+    <div><button>Search Pokemon</button><input type="search"></div>
 
     <div id="pokemonMainBox" class="pokemon-main-box">
 

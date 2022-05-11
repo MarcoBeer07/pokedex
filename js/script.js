@@ -1,19 +1,19 @@
 let currentPokemon;
 let allPokemons = [];
+let pokemonLimit = 151;
 
 /**
  * Function for onload of the body 
  */
 function init() {
-    loadPokemon();
+    loadPokemons();
     showSearchBar();
 }
 /**
  * Function to load the pokemon-data from the api to the app
- * @param {array} currentPokemon - variable that contains the data of the pokemons
  */
-async function loadPokemon() {
-    for (let i = 1; i < 151; i++) {
+async function loadPokemons() {
+    for (let i = 1; i < pokemonLimit; i++) {
 
         let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         let response = await fetch(url);
@@ -60,27 +60,28 @@ function hideBigView() {
 function showSearchBar(j) {
     document.getElementById('searchBar').innerHTML = `
         <button onclick="searchPokemon(${j})"><b>Search Pokemon</b></button>
-        <input type="text" id="searchPokemon" onkeydown="searchPokemon(${j})">
+        <input type="text" id="searchPokemon">
         `
 }
 /**
  * Function to to search pokemons with tiping in some letters. The function will check if the searched keyword will match some of the pokemons
  */
 function searchPokemon(i) {
-    let pokemonMainBox = document.getElementById('pokemonMainBox')
+    let pokemonMainBox = document.getElementById('pokemonMainBox');
     let searchPokemon = document.getElementById('searchPokemon').value;
     searchPokemon = searchPokemon.toLowerCase();
-
-    pokemonMainBox.innerHTML = '';
 
     for (let j = 0; j < allPokemons.length; j++) {
         let allPokemon = allPokemons[j]['name'];
 
-        if (allPokemon.toLowerCase().includes(searchPokemon)) {
-            pokemonMainBox.innerHTML = renderSearchedPokemonHTML(i, j);
-            setRightColorSearchView(j)
-        } else {
-            console.log('hi')
+        if (searchPokemon == "") {
+            pokemonMainBox.innerHTML = '';
+
+        } else if (allPokemon.toLowerCase().includes(searchPokemon)) {
+            pokemonMainBox.innerHTML = '';
+            pokemonMainBox.innerHTML += renderSearchedPokemonHTML(allPokemon, j, i);
+            setRightColorSearchView(j);
+            console.log('hi');
         }
     }
 }

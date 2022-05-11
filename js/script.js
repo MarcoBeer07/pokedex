@@ -57,26 +57,26 @@ function hideBigView() {
 /**
  * Function to render the searchbar
  */
-function showSearchBar(j) {
+function showSearchBar() {
     document.getElementById('searchBar').innerHTML = `
-        <button onclick="searchPokemon(${j})"><b>Search Pokemon</b></button>
-        <input type="text" id="searchPokemon">
+            <button onclick="searchPokemon()"><b>Search Pokemon</b></button>
+            <input id="searchPokemon" type="text" required placeholder="Search for Pokemon">
         `
 }
 /**
  * Function to to search pokemons with tiping in some letters. The function will check if the searched keyword will match some of the pokemons
  */
 function searchPokemon(i) {
+
     let pokemonMainBox = document.getElementById('pokemonMainBox');
     let searchPokemon = document.getElementById('searchPokemon').value;
     searchPokemon = searchPokemon.toLowerCase();
-
     for (let j = 0; j < allPokemons.length; j++) {
         let allPokemon = allPokemons[j]['name'];
 
-        if (searchPokemon == "") {
-            pokemonMainBox.innerHTML = '';
 
+        if (searchPokemon == '') {
+            pokemonMainBox.innerHTML = '';
         } else if (allPokemon.toLowerCase().includes(searchPokemon)) {
             pokemonMainBox.innerHTML = '';
             pokemonMainBox.innerHTML += renderSearchedPokemonHTML(allPokemon, j, i);
